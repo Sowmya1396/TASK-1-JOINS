@@ -1,0 +1,74 @@
+----In this, let me explain you what is a join in a Sql?
+----Types of JOINS and their Syntax
+
+
+WHAT IS A JOIN?
+A join in SQL is used to combine rows from two or more tables based on a related column between them.
+
+TYPES OF JOINS:
+There are four types of Joins
+a) INNER JOIN   b) LEFT JOIN   C) RIGHT JOIN   d) FULL JOIN
+
+
+*INNER JOIN
+---It returns only the rows that have matching values in both tables.
+Syntax:
+Select columns
+From Table1
+INNER JOIN Table2
+ON table1.column = table2.column;                                                                  
+
+
+Example:                                                                                  OUTPUT:  
+SELECT emp_name, dept_name                                                                  emp_name            dept_name      
+FROM Employees                                                                               Alice                HR 
+INNER JOIN Departments                                                                       Bob                  IT
+ON Employees.dept_id = Departments.dept_id;
+
+
+*LEFT JOIN
+---It returns all records from the left table (table1), and the matching records from the right table (table2).
+Syntax:
+Select columns
+From Table1
+LEFT JOIN Table2
+ON table1.column = table2.column;
+
+
+Example:                                                                                      OUTPUT:
+SELECT emp_name, dept_name                                                                    emp_name            dept_name
+FROM Employees                                                                                   Alice              HR
+LEFT JOIN Departments                                                                            Bob                IT
+ON Employees.dept_id = Departments.dept_id;                                                     Charlie             NULL
+                                                                                                David               NULL
+*RIGHT JOIN
+---It returns all records from the right table (table2), and the matching records from the left table (table1).
+Syntax:
+Select columns
+From Table1
+RIGHT JOIN Table2
+ON table1.column = table2.column;
+
+
+Example:                                                                                              OUTPUT:                              
+SELECT emp_name, dept_name                                                                            Alice            HR
+FROM Employees                                                                                          Bob            IT
+RIGHT JOIN Departments                                                                                 NULL            Marketing
+ON Employees.dept_id = Departments.dept_id;
+
+
+*FULL JOIN
+---It returns all records when there is a match in left (table1) or right (table2) table records.
+Syntax:
+Select columns
+From Table1
+FULL JOIN Table2
+ON table1.column = table2.column;
+
+
+Example:                                                                                              OUTPUT:
+SELECT emp_name, dept_name                                                                             Alice           HR
+FROM Employees                                                                                          Bob            IT
+FULL JOIN Departments                                                                                   Charlie        NULL
+ON Employees.dept_id = Deparments.dept_id;                                                              David          NULL    
+                                                                                                        NULL           Marketing
