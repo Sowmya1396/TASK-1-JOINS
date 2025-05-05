@@ -17,3 +17,4 @@ JOINS are used in relational databases to combine data from two or more tables b
 
 OUTPUT
 ![Image](https://github.com/user-attachments/assets/2aad956e-df1e-4a9c-8d12-f2a3fdc10452)
+![Image](https://github.com/user-attachments/assets/2aad956e-df1e-4a9c-8d12-f2a3fdc10452)
